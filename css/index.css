@@ -1,0 +1,185 @@
+body{
+  background-image: url("../images/stripe.png");
+  background-repeat: repeat;
+  padding-top: 50px;
+  /*height: 39rem !important;*/
+}
+
+nav.navbar-default{
+  background-color: #FAFAFA;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+a#brand_logo{
+  margin-top: -13px;
+}
+/*********************** SIDEBAR **********************/
+div#main div.row div.sidebar{
+  background-color: #F9F9F9;
+  display: block;
+  height: 100%;
+  width: 55px;
+  bottom: 0;
+  position: fixed;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+div#main div.row div.sidebar a{
+  border-top:1px solid #EAEAEA;
+  color: #CACACA;
+}
+
+div#main div.sidebar li.active.orange a{
+  color: #febb62;
+}
+
+div#main div.sidebar li.active.blue a{
+  color: #567fcf;
+}
+
+div#main div.sidebar li.active.red a{
+  color: #fa706e;
+}
+
+div#main div.sidebar li.active.purple a{
+  color: #bd54e5;
+}
+
+div#main div.sidebar li.active.green a{
+  color: #bfee6e;
+}
+
+div#main div.sidebar a:hover{
+  color: #A7A7A7;
+}
+
+/*********************** MAIN CONTENT **********************/
+div#main div.row div.main-content{
+  margin-left: 55px;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  padding-bottom: 5%;
+}
+
+/*********** Carousel ***********/
+div#main div.main-content div#carousel-ad{
+  margin-top: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*********** Button Options ***********/
+div.main-content div#button-options div{
+  text-align: center;
+}
+
+div.main-content div#button-options button{
+  width:100%;
+  text-align: center;
+  height:142px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+} 
+
+div.main-content div#button-options button div.option-icon h1{
+  font-size: 400%;
+}
+
+div.main-content div#button-options button div.option-text{
+  font-size: 100%;
+}
+
+@media screen and (max-width: 1220px){
+  div.main-content div#button-options button div.option-icon h1{
+    font-size: 350%;
+  }
+
+  div.main-content div#button-options button div.option-text{
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 991px){
+  div.main-content div#button-options button{
+    height:115px;
+  } 
+
+  div.main-content div#button-options button div.option-icon h1{
+    font-size: 300%;
+  }
+
+  div.main-content div#button-options button div.option-text{
+    font-size: 80%;
+  }
+}
+
+/*********** Search Bar ***********/
+div.main-content div#search-bar div.input-group{
+  background-color: #F9F9F9;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*********** Product Gallery ***********/
+/*div.main-content div#product-gallery div.col-thumbnail{
+  padding:0px;
+}*/
+
+div.main-content div#product-gallery div.thumbnail{
+  padding:0px;
+}
+
+div.main-content div#product-gallery div.thumbnail div.button-group{
+  position: absolute;
+  z-index: 1000;
+  padding:5px;
+  display:none;
+}
+
+div.main-content div#product-gallery div.thumbnail{
+    -webkit-transition: all .5s ease; /* Safari and Chrome */
+    -moz-transition: all .5s ease; /* Firefox */
+    -o-transition: all .5s ease; /* IE 9 */
+    -ms-transition: all .5s ease; /* Opera */
+    transition: all .5s ease;
+}
+
+div.main-content div#product-gallery div.thumbnail:hover{
+    /*padding: 5px 5px 0 5px;*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0) scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.10); /* Firefox */
+    -ms-transform:scale(1.10); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.05); /* Opera */
+    transform:translatZ(0) scale(1.05);
+}
+
+div.main-content div#product-gallery div.thumbnail button{
+  text-align: center;
+  padding: 4px 3px 1px 4px ;
+  background-color: rgba(0,0,0,0.2);
+  border: 0;
+  height: 30px;
+  width: 30px;
+}
+
+div.main-content div#product-gallery div.thumbnail button:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+
+div.main-content div#product-gallery div.thumbnail button span{
+  font-size: 20px;
+  color: white;
+}
+
+div.main-content div#product-gallery div.caption a.prodcut-name{
+  font-size: 5px;
+}
+
+div.main-content div#product-gallery div.hidden-caption{
+  display: none;
+}
