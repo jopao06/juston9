@@ -25,10 +25,14 @@ div#main div.row div.sidebar{
   text-align: center;
   font-size: 23px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1000;
 }
 div#main div.row div.sidebar a{
   border-top:1px solid #EAEAEA;
   color: #CACACA;
+}
+div#main div.sidebar li a:hover{
+  color: #A3A3A3;
 }
 
 div#main div.sidebar li.active.orange a{
@@ -49,10 +53,6 @@ div#main div.sidebar li.active.purple a{
 
 div#main div.sidebar li.active.green a{
   color: #bfee6e;
-}
-
-div#main div.sidebar a:hover{
-  color: #A7A7A7;
 }
 
 /*********************** MAIN CONTENT **********************/
@@ -82,7 +82,48 @@ div.main-content div#button-options button{
   text-align: center;
   height:142px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+
+  /* HOVER OFF */
+   -webkit-transition: box-shadow 1s ease;
+}
+
+div.main-content div#button-options button:hover{
+  background-color: white;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.4);
+  width: 110%
+
+  -webkit-transition: box-shadow 1s linear;
 } 
+
+div.main-content div#button-options button:focus{
+  background-color: #e6e6e6;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+} 
+
+div.main-content div#button-options button#sell-btn:hover{
+  color: #9d43bf;
+} 
+
+div.main-content div#button-options button#register-btn:hover{
+  color: #f53b3c;
+} 
+
+div.main-content div#button-options button#guaranteed-btn:hover{
+  color: #365dac;
+} 
+
+div.main-content div#button-options button#secured-btn:hover{
+  color: #7ea538;
+} 
+
+div.main-content div#button-options button:focus{
+  outline: 0;
+} 
+
+div.main-content div#button-options button div.option-icon{
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 div.main-content div#button-options button div.option-icon h1{
   font-size: 400%;
@@ -113,6 +154,44 @@ div.main-content div#button-options button div.option-text{
 
   div.main-content div#button-options button div.option-text{
     font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  div.main-content div#button-options button{
+    padding: 0;
+    height: 5em;
+  }
+
+  div.main-content div#button-options button div.option-icon{
+    padding-left: 30px;
+    padding-right: 0px;
+  }
+
+  div.main-content div#button-options button div.visible-xs.option-text{
+    padding-top: 20px;
+  }
+
+  div.main-content div#button-options button div.visible-xs.option-text p{
+    /*word-break: break-all;*/
+    white-space:normal;
+  }
+
+  div.main-content div#button-options button div.option-icon h1{
+    font-size: 250%;
+  }
+}
+
+@media screen and (max-width: 510px){
+  div.main-content div#button-options button div.visible-xs.option-text{
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 381px){
+  div.main-content div#button-options button div.visible-xs.option-text{
+    font-size: 80%;
+    padding-left: 5px;
   }
 }
 
