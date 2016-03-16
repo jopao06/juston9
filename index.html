@@ -111,7 +111,7 @@
                         Click Here to start selling</p>
                       </div>
                     </div>
-                  </button>
+                  </button><!-- /sell-btn -->
                 </div>
                 <div class="col-md-3 col-sm-6">
                   <button type="button" id="register-btn" class="btn btn-default btn-lg">
@@ -128,7 +128,7 @@
                         Because it's easy and free!<br></p>
                       </div>
                     </div>
-                  </button>
+                  </button><!-- /register-btn -->
                 </div>
                 <div class="col-md-3 col-sm-6">
                   <button type="button" id="guaranteed-btn" class="btn btn-default btn-lg">
@@ -145,7 +145,7 @@
                         Money is guaranteed back<br></p>
                       </div>
                     </div>
-                  </button>
+                  </button><!-- /guaranteed-btn -->
                 </div>
                 <div class="col-md-3 col-sm-6">
                   <button type="button" id="secured-btn" class="btn btn-default btn-lg">
@@ -162,7 +162,7 @@
                         Transactions are 100% secured</p>
                       </div>
                     </div>
-                  </button>
+                  </button><!-- /secured-btn -->
                 </div>
               </div>
             </div>
@@ -173,18 +173,18 @@
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categories <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Real Estate</a></li>
-                    <li><a href="#">Automotive</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gadgets</a></li>
-                  </ul>
-                </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categories <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Real Estate</a></li>
+                      <li><a href="#">Automotive</a></li>
+                      <li><a href="#">Products</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Gadgets</a></li>
+                    </ul>
+                  </div>
                   <button id="search-button" class="btn btn-primary" type="button">Search</button>
                 </span>
               </div><!-- /input-group -->
@@ -196,6 +196,7 @@
               <div id="row-thumbnail" class="row">
                 <div id="thumbnail" class="col-lg-3 col-md-4 col-sm-6 col-lg-12 col-thumbnail" style="">
                   <div class="thumbnail">
+                    <!-- Favorite and Shop Icon -->
                     <div class="button-group">
                       <button type="button" class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -204,20 +205,24 @@
                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                       </button>
                     </div>
-                    <img src="" alt="Product" style="background-color: gray; width:100%; text-align:center">
+                    <!-- Product Image -->
+                    <div class="image-container">
+                      <img src="images/0.jpg" alt="Product" style="">
+                    </div>
+                    <!-- Product Description -->
                     <div class="caption">
                       <a class="product-name"><strong>Product Name</strong></a>
                       <p class="product-price">Php 100.00</p>
                       <div class="hidden-caption">
-                        <p class="product-seller">Sold By: User</p>
-                        <p class="product-rating">Seller Rating: 98%</p>
+                        <p class="product-seller"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sold By: User</p>
+                        <p class="product-rating"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Seller Rating: 98%</p>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div><!-- /thumbnail -->
               </div>
             </div>
-          </div>
+          </div><!-- /product-gallery -->
         </div><!-- /main-content -->
       </div>
     </div><!-- /main -->
@@ -242,13 +247,14 @@
           thumbnail
             .attr("id","thumbnail"+i) // Assign unique id
             .find("img")
+            .attr("src","images/"+(i%3)+".jpg")
             .attr("alt","Product "+(i+1));  // Alternate Text (Change to product name)
           $('#thumbnail').parent().append(thumbnail);
         };
 
         // Make image to square
-        var imgWidth = $('.thumbnail').find('img').css("width");
-        $('.thumbnail').find('img').css("height",imgWidth);
+        // var imgWidth = $('.thumbnail').find('img').css("width");
+        // $('.thumbnail').find('img').css("height",imgWidth);
 
         // Fix height per column
         var thumbHeight= $('.col-thumbnail').css("height");
@@ -286,6 +292,6 @@
 
 
       });
-    </script
+    </script>
   </body>
 </html>

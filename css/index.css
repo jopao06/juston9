@@ -84,7 +84,7 @@ div.main-content div#button-options button{
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 
   /* HOVER OFF */
-   -webkit-transition: box-shadow 1s ease;
+   -webkit-transition: box-shadow 0.5s ease;
 }
 
 div.main-content div#button-options button:hover{
@@ -92,7 +92,7 @@ div.main-content div#button-options button:hover{
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.4);
   width: 110%
 
-  -webkit-transition: box-shadow 1s linear;
+  -webkit-transition: box-shadow 0.5s ease;
 } 
 
 div.main-content div#button-options button:focus{
@@ -209,6 +209,24 @@ div.main-content div#search-bar div.input-group{
 
 div.main-content div#product-gallery div.thumbnail{
   padding:0px;
+  max-width: 100%;
+
+  -webkit-transition: all .5s ease; /* Safari and Chrome */
+  -moz-transition: all .5s ease; /* Firefox */
+  -o-transition: all .5s ease; /* IE 9 */
+  -ms-transition: all .5s ease; /* Opera */
+  transition: all .5s ease;
+}
+
+div.main-content div#product-gallery div.thumbnail:hover{
+  /*padding: 5px 5px 0 5px;*/
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform:translateZ(0) scale(1.05); /* Safari and Chrome */
+  -moz-transform:scale(1.05); /* Firefox */
+  -ms-transform:scale(1.05); /* IE 9 */
+  -o-transform:translatZ(0) scale(1.05); /* Opera */
+  transform:translatZ(0) scale(1.05);
 }
 
 div.main-content div#product-gallery div.thumbnail div.button-group{
@@ -218,24 +236,6 @@ div.main-content div#product-gallery div.thumbnail div.button-group{
   display:none;
 }
 
-div.main-content div#product-gallery div.thumbnail{
-    -webkit-transition: all .5s ease; /* Safari and Chrome */
-    -moz-transition: all .5s ease; /* Firefox */
-    -o-transition: all .5s ease; /* IE 9 */
-    -ms-transition: all .5s ease; /* Opera */
-    transition: all .5s ease;
-}
-
-div.main-content div#product-gallery div.thumbnail:hover{
-    /*padding: 5px 5px 0 5px;*/
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform:translateZ(0) scale(1.05); /* Safari and Chrome */
-    -moz-transform:scale(1.10); /* Firefox */
-    -ms-transform:scale(1.10); /* IE 9 */
-    -o-transform:translatZ(0) scale(1.05); /* Opera */
-    transform:translatZ(0) scale(1.05);
-}
 
 div.main-content div#product-gallery div.thumbnail button{
   text-align: center;
@@ -255,10 +255,31 @@ div.main-content div#product-gallery div.thumbnail button span{
   color: white;
 }
 
+div.main-content div#product-gallery div.thumbnail div.image-container{
+  width:100%;
+  height: 230px;
+  overflow: hidden;
+  margin-right-left: auto;
+  margin-left-right: auto;
+  text-align:center;
+}
+
+div.main-content div#product-gallery div.thumbnail div.image-container img{
+  background-color: gray; 
+  max-height: 320px;
+  max-width: 320px;
+}
+
+
 div.main-content div#product-gallery div.caption a.prodcut-name{
   font-size: 5px;
 }
 
 div.main-content div#product-gallery div.hidden-caption{
   display: none;
+}
+
+div.main-content div#product-gallery div.hidden-caption p{
+  font-size: 0.75em;
+  margin: 0;
 }
