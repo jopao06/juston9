@@ -230,15 +230,49 @@
 
     <!-- Modal -->
     <div class="modal fade" id="product-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body">
             <div class="row">
-              <div class="col-xs-6" style="background-color: gray; height: 500px; overflow: hidden">
+              <div class="col-xs-6 product-img-holder" style="height: 500px; overflow: hidden">
                 <img src="">
               </div>
-              <div class="col-xs-6" sytle="background-color: blue; height: 50px">
+              <div class="col-xs-6 product-desc-holder" sytle="background-color: blue; height: 50px">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="product-name">Product 1</h1>
+                <p class="product-price">Php 300.00</p>
+                <p class="h4 product-desc-heading">Product Description:</p>
+                <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim dapibus convallis. Sed dictum sem vitae augue feugiat sollicitudin. Duis ultricies dui est, non facilisis lectus rhoncus convallis. Vivamus maximus rutrum tempus. Suspendisse vitae quam porta, lacinia ligula viverra, rhoncus risus. Suspendisse commodo, risus ut condimentum semper, nisi elit consequat nibh, vel lacinia nulla ex ac nibh. Donec varius orci nisi. Vestibulum non velit nec leo bibendum facilisis quis vitae dolor. Vivamus ipsum elit, mattis dictum nisl id, malesuada porta elit. Nam quis vestibulum metus. Pellentesque at lorem mi. Praesent ac convallis nisi, at luctus ipsum.</p>
+
+                <p class="product-seller" style="margin-bottom: 0"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sold By: <user>User</user></p>
+                <p class="product-rating"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Seller Rating: <rating>98%</rating></p>
+
+                <div class="row user-action">
+                  <div class="pull-right">
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      Add to Favorites
+                    </button>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+
+
+
+                <!-- <div class="row" style="background-color: blue">
+                  <div class="col-xs-4">
+                    <img src="...">
+                  </div>
+                  <div class="col-xs-4">
+                    <img src="...">
+                  </div>
+                  <div class="col-xs-4">
+                    <img src="...">
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -322,14 +356,30 @@
             $(this).css("z-index",0);
         });
 
-        // console.log($('.modal'));
-        $('.thumbnail img').click(function(){
-          // var srcImg = $(this).attr("src");
-          $('#product-modal')
-            .find("img")
-            .attr("src",$(this).attr("src"))
-        });
+        $('#product-modal').on('show.bs.modal', function (event) {
+          var thumbnail = $(event.relatedTarget).parent();
+          var modal = $(this);
 
+          modal
+            .find("img")
+            .attr("src", thumbnail.find("img").attr("src"));
+
+          modal
+            .find(".product-name")
+            .text(thumbnail.find(".product-name").text());
+
+          modal
+            .find(".product-price")
+            .text(thumbnail.find(".product-price").text());
+
+          modal
+            .find(".product-seller user")
+            .text(thumbnail.find(".product-seller user").text());
+
+          modal
+            .find(".product-rating rating")
+            .text(thumbnail.find(".product-rating rating").text());
+        });
       });
     </script>
   </body>

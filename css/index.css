@@ -13,7 +13,9 @@ nav.navbar-default{
 a#brand_logo{
   margin-top: -13px;
 }
-/*********************** SIDEBAR **********************/
+/**********************************************
+                    SIDEBAR 
+***********************************************/
 div#main div.row div.sidebar{
   background-color: #F9F9F9;
   display: block;
@@ -55,7 +57,9 @@ div#main div.sidebar li.active.green a{
   color: #bfee6e;
 }
 
-/*********************** MAIN CONTENT **********************/
+/**********************************************
+                MAIN CONTENT 
+***********************************************/
 div#main div.row div.main-content{
   margin-left: 55px;
   height: 100%;
@@ -64,7 +68,9 @@ div#main div.row div.main-content{
   padding-bottom: 5%;
 }
 
-/*********** Carousel ***********/
+/**********************************************
+                  CAROUSEL 
+***********************************************/
 div#main div.main-content div#carousel-ad{
   margin-top: 30px;
   padding-left: 0px;
@@ -72,7 +78,9 @@ div#main div.main-content div#carousel-ad{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/*********** Button Options ***********/
+/**********************************************
+                BUTTON OPTIONS
+***********************************************/
 div.main-content div#button-options div{
   text-align: center;
 }
@@ -195,18 +203,18 @@ div.main-content div#button-options button div.option-text{
   }
 }
 
-/*********** Search Bar ***********/
+/**********************************************
+                  SEARCH BAR
+***********************************************/
 div.main-content div#search-bar div.input-group{
   background-color: #F9F9F9;
   padding: 15px 15px 15px 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-/*********** Product Gallery ***********/
-/*div.main-content div#product-gallery div.col-thumbnail{
-  padding:0px;
-}*/
-
+/**********************************************
+                PRODUCT GALLERY 
+***********************************************/
 div.main-content div#product-gallery div.thumbnail{
   padding:0px;
   max-width: 100%;
@@ -282,4 +290,34 @@ div.main-content div#product-gallery div.hidden-caption{
 div.main-content div#product-gallery div.hidden-caption p{
   font-size: 0.75em;
   margin: 0;
+}
+
+div#product-modal img{
+  margin-left: auto;
+  margin-right: auto;
+  height:95%;
+}
+
+div#product-modal div.modal-lg{
+  width:80%;
+}
+
+div#product-modal div.modal-body h1.product-name{
+  margin-bottom: 0;
+}
+
+div#product-modal div.modal-body p.product-price{
+  font-size: 1.2em;
+}
+
+div#product-modal div.modal-body .h4.product-desc-heading{
+  margin-bottom: 0;
+}
+
+div#product-modal div.modal-body div.user-action{
+  margin-right: 10px;
+}
+
+div#product-modal div.modal-body div.user-action button{
+  border: 0px;
 }
