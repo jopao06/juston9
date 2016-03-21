@@ -1,0 +1,70 @@
+body{
+  background-image: url("../images/stripe.png");
+  background-repeat: repeat;
+  padding-top: 50px;
+  /*height: 39rem !important;*/
+}
+
+nav.navbar-default{
+  background-color: #FAFAFA;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+a#brand_logo{
+  margin-top: -13px;
+}
+/**********************************************
+                    SIDEBAR 
+***********************************************/
+div#main div.row div.sidebar{
+  background-color: #F9F9F9;
+  display: block;
+  height: 100%;
+  width: 55px;
+  bottom: 0;
+  position: fixed;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+div#main div.row div.sidebar a{
+  border-top:1px solid #EAEAEA;
+  color: #CACACA;
+}
+div#main div.sidebar li a:hover{
+  color: #A3A3A3;
+}
+
+div#main div.sidebar li.active.orange a{
+  color: #febb62;
+}
+
+div#main div.sidebar li.active.blue a{
+  color: #567fcf;
+}
+
+div#main div.sidebar li.active.red a{
+  color: #fa706e;
+}
+
+div#main div.sidebar li.active.purple a{
+  color: #bd54e5;
+}
+
+div#main div.sidebar li.active.green a{
+  color: #bfee6e;
+}
+
+/**********************************************
+                MAIN CONTENT 
+***********************************************/
+div#main div.row div.main-content{
+  margin-left: 55px;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  padding-bottom: 5%;
+  /*width: 100%;*/
+}

@@ -15,11 +15,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="css/common.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-
-    <style type="text/css">
-
-    </style>
   </head>
 
   <body>
@@ -52,10 +49,10 @@
         <div class="sidebar"> 
           <ul class="nav nav-sidebar">
             <li class="active orange">
-              <a href="#" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+              <a href="index.html" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
             </li>
             <li class="blue">
-              <a href="#" data-toggle="tooltip" data-placement="right" title="Login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a>
+              <a href="login.html" data-toggle="tooltip" data-placement="right" title="Login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a>
             </li>
             <li class="red">
               <a href="#" data-toggle="tooltip" data-placement="right" title="Register"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></a>
@@ -228,8 +225,37 @@
       </div>
     </div><!-- /main -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="product-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- <div  class="modal fade" tabindex="‐1" role="dialog" aria‐labelledby="mySmallModalLabel">
+      <div class="modal‐dialog modal‐sm" role="document">
+        <div class="modal‐content">
+          <div class="modal-body">
+            HELLO WORLD
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--div class="modal fade" id="log-in-modal" tabindex="‐1" role="dialog" aria‐labelledby="myModalLabel">
+      <div class="modal‐dialog" role="document">
+        <div class="modal‐content">
+          <div class="modal‐header">
+            <button type="button" class="close" data‐dismiss="modal" aria‐label="Close"><span aria‐hidden="true">&times;</span></button>
+            <h4 class="modal‐title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal‐body">
+            ...
+          </div>
+          <div class="modal‐footer">
+            <button type="button" class="btn btn‐default" data‐dismiss="modal">Close</button>
+            <button type="button" class="btn btn‐primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div-->
+
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body">
@@ -260,8 +286,6 @@
                   </div>
                 </div>
 
-
-
                 <!-- <div class="row" style="background-color: blue">
                   <div class="col-xs-4">
                     <img src="...">
@@ -283,104 +307,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
-    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--script src="js/jquery.min.js"></script-->
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        $('.dropdown-toggle').dropdown()
-
-        // Duplicate Image Panel Template 
-        var displayNum = 16;
-        var thumbnail;
-        for (var i = 0; i < displayNum; i++) {
-          thumbnail = $('#thumbnail').clone();
-          thumbnail
-            .attr("id","thumbnail"+i) // Assign unique id
-            .find("img")
-            .attr("src","images/"+(i%3)+".jpg")
-            .attr("alt","Product "+(i+1))  // Alternate Text (Change to product name)
-            .parent().parent()
-            .find("a.product-name strong")
-            .text("Product "+(i+1))
-            .parent().parent()
-            .find("p.product-price")
-            .text("Php "+((Math.random()*10000).toFixed(2)))
-            .parent()
-            .find("p.product-seller user")
-            .text("User"+(i+1))
-            .parent().parent()
-            .find("p.product-rating rating")
-            .text((Math.random()*100).toFixed(2)+"%");
-          $('#thumbnail').parent().append(thumbnail);
-          thumbnail.attr("id","thumbnail"+i);
-        };
-
-        // Make image to square
-        // var imgWidth = $('.thumbnail').find('img').css("width");
-        // $('.thumbnail').find('img').css("height",imgWidth);
-
-        // Fix height per column
-        var thumbHeight= $('.col-thumbnail').css("height");
-        $('.col-thumbnail').css("max-height",thumbHeight);
-
-        // Hide Image Panel template
-        $('div#thumbnail').css("display","none");
-
-        $('.thumbnail').mouseover(function(){
-          $(this).find('.button-group')
-            .css("display","block")
-            .parent()
-            .find(".hidden-caption")
-            .css("display","block")
-            .parent()
-            .parent()
-            .css("padding",0);
-
-            // Overlap Image Panel on hover
-            $('.thumbnail').css("position","relative");
-            $(this).css("z-index",1000);
-        });
-
-        $('.thumbnail').mouseout(function(){
-          $(this).find('.button-group')
-            .css("display","none")
-            .parent()
-            .css("z-index",0)
-            .find(".hidden-caption")
-            .css("display","none")
-
-            // Return to default
-            $(this).css("z-index",0);
-        });
-
-        $('#product-modal').on('show.bs.modal', function (event) {
-          var thumbnail = $(event.relatedTarget).parent();
-          var modal = $(this);
-
-          modal
-            .find("img")
-            .attr("src", thumbnail.find("img").attr("src"));
-
-          modal
-            .find(".product-name")
-            .text(thumbnail.find(".product-name").text());
-
-          modal
-            .find(".product-price")
-            .text(thumbnail.find(".product-price").text());
-
-          modal
-            .find(".product-seller user")
-            .text(thumbnail.find(".product-seller user").text());
-
-          modal
-            .find(".product-rating rating")
-            .text(thumbnail.find(".product-rating rating").text());
-        });
-      });
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>

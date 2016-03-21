@@ -1,0 +1,30 @@
+/**********************************************
+                 LOGIN FORM
+***********************************************/
+div#main div.row div.main-content{
+  width: 100%;
+}
+
+div.main-content div.row{
+  height: 100%;
+  padding-bottom: 0;
+}
+
+div#main div.row div.main-content div.row div.panel{
+  margin-top: 9em;
+}
+
+div.main-content form div.brand-container{
+    margin-bottom: 1em;
+}
+
+div.main-content form div.brand-container img{
+    height: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.main-content button{
+    width:100%;
+}
