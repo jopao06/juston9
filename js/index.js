@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger:"hover"
+  });
   $('.dropdown-toggle').dropdown()
 
   // Duplicate Image Panel Template 
@@ -27,10 +29,6 @@ $(document).ready(function () {
     $('#thumbnail').parent().append(thumbnail);
     thumbnail.attr("id","thumbnail"+i);
   };
-
-  // Make image to square
-  // var imgWidth = $('.thumbnail').find('img').css("width");
-  // $('.thumbnail').find('img').css("height",imgWidth);
 
   // Fix height per column
   var thumbHeight= $('.col-thumbnail').css("height");
@@ -101,5 +99,15 @@ $(document).ready(function () {
     modal
       .find(".product-rating rating")
       .text(thumbnail.find(".product-rating rating").text());
+  });
+
+  var current_active = $('li.active');
+  $('#log-in-modal').on('show.bs.modal', function (event) {
+    current_active.removeClass("active");
+    $('li.login').addClass("active");
+  });
+  $('#log-in-modal').on('hide.bs.modal', function (event) {
+    $('li.login').removeClass("active");
+    current_active.addClass("active");
   });
 });

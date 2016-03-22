@@ -1,4 +1,16 @@
 /**********************************************
+                MAIN CONTENT 
+***********************************************/
+div#main div.row div.main-content{
+  margin-left: 55px;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  padding-bottom: 5%;
+  /*width: 100%;*/
+}
+
+/**********************************************
                   CAROUSEL 
 ***********************************************/
 div#main div.main-content div#carousel-ad{
@@ -20,6 +32,8 @@ div.main-content div#button-options button{
   text-align: center;
   height:142px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: #F9F9F9;
+  border: 1px solid #FCFCFC;
 
   /* HOVER OFF */
    -webkit-transition: box-shadow 0.5s ease;
@@ -221,6 +235,9 @@ div.main-content div#product-gallery div.hidden-caption p{
   margin: 0;
 }
 
+/**********************************************
+                 PRODUCT MODAL 
+***********************************************/
 div#product-modal div.modal-lg{
   width:80%;
 }
@@ -264,4 +281,37 @@ div#product-modal div.modal-body div.user-action button{
 
 div#product-modal div.modal-body div.user-action button:focus{
   outline: 0;
+}
+
+/**********************************************
+                 LOGIN MODAL 
+***********************************************/
+div#log-in-modal div.modal-sm{
+  margin-top: 9em;
+  width:22em;
+  height: 26em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+div#log-in-modal div.modal-sm div.modal-content{
+  height: 100%;
+}
+
+div#log-in-modal form div.brand-container{
+  margin-bottom: 1em;
+}
+
+div#log-in-modal form div.brand-container img{
+  height: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 2em;
+}
+
+div#log-in-modal button{
+  width:100%;
+  margin-top: 3em;
 }

@@ -33,8 +33,13 @@ div#main div.row div.sidebar a{
   border-top:1px solid #EAEAEA;
   color: #CACACA;
 }
+
 div#main div.sidebar li a:hover{
   color: #A3A3A3;
+}
+
+div#main div.sidebar li a:focus{
+  outline:0;
 }
 
 div#main div.sidebar li.active.orange a{
@@ -55,16 +60,4 @@ div#main div.sidebar li.active.purple a{
 
 div#main div.sidebar li.active.green a{
   color: #bfee6e;
-}
-
-/**********************************************
-                MAIN CONTENT 
-***********************************************/
-div#main div.row div.main-content{
-  margin-left: 55px;
-  height: 100%;
-  position: fixed;
-  overflow-y: auto;
-  padding-bottom: 5%;
-  /*width: 100%;*/
 }

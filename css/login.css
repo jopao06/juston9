@@ -3,6 +3,7 @@
 ***********************************************/
 div#main div.row div.main-content{
   width: 100%;
+  margin: 0;
 }
 
 div.main-content div.row{
@@ -12,19 +13,30 @@ div.main-content div.row{
 
 div#main div.row div.main-content div.row div.panel{
   margin-top: 9em;
+  width:22em;
+  height: 26em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+div.main-content form{
+  height: 100%;
 }
 
 div.main-content form div.brand-container{
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 div.main-content form div.brand-container img{
-    height: 5em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  height: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 2em;
 }
 
 div.main-content button{
-    width:100%;
+  width:100%;
+  margin-top: 3em;
 }
