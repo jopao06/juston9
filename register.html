@@ -50,30 +50,96 @@
 
     <div id="main" class="container-fluid">
       <div class="row">
-        <div class="sidebar"> 
-          <ul class="nav nav-sidebar">
-            <li class="active index orange">
-              <a href="index.html" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-            </li>
-            <li class="login blue">
-              <a href="login.html" data-toggle="tooltip" data-placement="right" title="Login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a>
-            </li>
-            <li class="register red">
-              <a href="#" data-toggle="tooltip" data-placement="right" title="Register"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></a>
-            </li>
-            <li class="about-us purple">
-              <a href="#" data-toggle="tooltip" data-placement="right" title="About Us"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></a>
-            </li>
-            <li class="contact-us green">
-              <a href="#" data-toggle="tooltip" data-placement="right" title="Contact Us"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></a>
-            </li>
-          </ul>
-        </div><!-- /side-bar --> 
-        <div class="main-content">
-          <div class="row">
-            
+        <div class="col-sm-5">
+            <div class="panel panel-default text-holder">
+              <div class="panel-body">
+                <h1>Lorem ipsum</h1>
+                <p>Dolor sit amet, consectetur adipiscing elit. Maecenas dignissim dapibus convallis. Sed dictum sem vitae augue feugiat sollicitudin. Duis ultricies dui est, non facilisis lectus rhoncus convallis. Vivamus maximus rutrum tempus. Suspendisse vitae quam porta, lacinia ligula viverra, rhoncus risus. Suspendisse commodo, risus ut condimentum semper, nisi elit consequat nibh, vel lacinia nulla ex ac nibh. Donec varius orci nisi. Vestibulum non velit nec leo bibendum facilisis quis vitae dolor. Vivamus ipsum elit, mattis dictum nisl id, malesuada porta elit. Nam quis vestibulum metus. Pellentesque at lorem mi. Praesent ac convallis nisi, at luctus ipsum.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-7">
+          <div class="panel panel-default form-holder">
+            <div class="panel-body">
+              <form>
+                <h1>Register</h1>
+                <div class="form-group">
+                  <label>Name</label>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <input type="text" id="fname" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" id="mname" class="form-control" placeholder="Middle Name">
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" id="lname" class="form-control" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>Birthday</label>
+                      <input type="date" id="bdate" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                      <label>Sex</label><br>
+                      <label class="radio-inline">
+                        <input type="radio" name="user-sex" value="m"> Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="user-sex" value="f"> Female
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>Email</label>
+                      <input type="email" id="email" class="form-control" placeholder="user@email.com">
+                    </div>
+                    <div class="col-sm-6">
+                      <label>Username</label>
+                      <input type="text" id="uname" class="form-control" placeholder="username">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>Password</label>
+                      <input type="password" id="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="col-sm-6">
+                      <label>Re-Password</label>
+                      <input type="password" id="re-password" class="form-control" placeholder="Re-Password">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>Contact No.</label>
+                      <input type="text" id="contact-num" class="form-control" placeholder="09---------">
+                    </div>
+                    <!-- <div class="col-sm-6">
+                      <label>Re-Password</label>
+                      <input type="password" id="re-password" class="form-control" placeholder="Re-Password">
+                    </div> -->
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="agreement" value="m"><b> I have read and agree to the terms and conditions</b>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-default" disabled>Submit</button>
+              </form>
+            </div>
           </div>
-        </div><!-- /main-content -->
+        </div>
       </div>
     </div><!-- /main -->
 
@@ -84,6 +150,13 @@
     <script src="js/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+    <script>
+    $(document).ready(function (){
+      $("#agreement").on("check",function(){
+        console.log($("#agreement"));
+
+      });
+    });
+    </script>
   </body>
 </html>
