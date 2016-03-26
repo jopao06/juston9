@@ -2,9 +2,6 @@ body{
     overflow-y: hidden;
 }
 
-div#main{
-}
-
 div#main > div.row{
     display: block;
     width: 100%;
@@ -18,7 +15,6 @@ div#main div.row > div{
 }
 
 div#main div.row div.panel{
-    height: 90%;
     margin-top: 1em;
-    /*margin-bottom: 1em;*/
+    margin-bottom: 20%;
 }
