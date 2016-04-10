@@ -36,7 +36,7 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Cart</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#cart-modal">Cart</a></li>
             <li><a href="#">Notification</a></li>
             <li><a href="#">Favorite</a></li>
           </ul>
@@ -278,20 +278,94 @@
                     </button>
                   </div>
                 </div>
-
-                <!-- <div class="row" style="background-color: blue">
-                  <div class="col-xs-4">
-                    <img src="...">
-                  </div>
-                  <div class="col-xs-4">
-                    <img src="...">
-                  </div>
-                  <div class="col-xs-4">
-                    <img src="...">
-                  </div>
-                </div> -->
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1>Cart</h1>
+            <ul class="list-group">
+              <li href="#" id="product1" class="list-group-item fade in">
+                <div class"row">
+                  <button type="button" class="cart-list close" data-dismiss="#product1" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="col-xs-2 image-container">
+                      <img src="images/0.jpg">
+                  </div>
+                  <div class="col-xs-10">
+                    <div clas="row">
+                      <h3 class="list-group-item-heading product-name">Product 1: ASDZZAFSGKLMM</h3>
+                    </div>
+                    <div clas="row">
+                      <div class="col-xs-4">
+                        <p class="list-group-item-text product-price">Php 3431.19</p>
+                        <p class="product-seller" style="margin-bottom: 0"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sold By: <user>User</user></p>
+                        <p class="product-rating"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Seller Rating: <rating>98%</rating></p>
+                      </div>
+                      <div class="col-xs-8 desc-container">
+                        Description:<p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim dapibus convallis. Sed dictum sem vitae augue feugiat sollicitudin. Duis ultricies dui est, non facilisis lectus rhoncus convallis. Vivamus maximus rutrum tempus. Suspendisse vitae quam porta, lacinia ligula viverra, rhoncus risus. Suspendisse commodo, risus ut condimentum semper, nisi elit consequat nibh, vel lacinia nulla ex ac nibh. Donec varius orci nisi. Vestibulum non velit nec leo bibendum facilisis quis vitae dolor. Vivamus ipsum elit, mattis dictum nisl id, malesuada porta elit. Nam quis vestibulum metus. Pellentesque at lorem mi. Praesent ac convallis nisi, at luctus ipsum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li href="#" id="product2" class="list-group-item fade in">
+                <div class"row">
+                  <button type="button" class="cart-list close" data-dismiss="#product2" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="col-xs-2 image-container">
+                      <img src="images/1.jpg">
+                  </div>
+                  <div class="col-xs-10">
+                    <div clas="row">
+                      <h3 class="list-group-item-heading product-name">Product 2: ASDZZAFSGKLMM</h3>
+                    </div>
+                    <div clas="row">
+                      <div class="col-xs-4">
+                        <p class="list-group-item-text product-price">Php 3431.19</p>
+                        <p class="product-seller" style="margin-bottom: 0"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sold By: <user>User</user></p>
+                        <p class="product-rating"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Seller Rating: <rating>98%</rating></p>
+                      </div>
+                      <div class="col-xs-8 desc-container">
+                        Description:<p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim dapibus convallis. Sed dictum sem vitae augue feugiat sollicitudin. Duis ultricies dui est, non facilisis lectus rhoncus convallis. Vivamus maximus rutrum tempus. Suspendisse vitae quam porta, lacinia ligula viverra, rhoncus risus. Suspendisse commodo, risus ut condimentum semper, nisi elit consequat nibh, vel lacinia nulla ex ac nibh. Donec varius orci nisi. Vestibulum non velit nec leo bibendum facilisis quis vitae dolor. Vivamus ipsum elit, mattis dictum nisl id, malesuada porta elit. Nam quis vestibulum metus. Pellentesque at lorem mi. Praesent ac convallis nisi, at luctus ipsum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li href="#" id="product3" class="list-group-item fade in">
+                <div class"row">
+                  <button type="button" class="cart-list close" data-dismiss="#product3" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="col-xs-2 image-container">
+                      <img src="images/2.jpg">
+                  </div>
+                  <div class="col-xs-10">
+                    <div clas="row">
+                      <h3 class="list-group-item-heading product-name">Product 3: ASDZZAFSGKLMM</h3>
+                    </div>
+                    <div clas="row">
+                      <div class="col-xs-4">
+                        <p class="list-group-item-text product-price">Php 3431.19</p>
+                        <p class="product-seller" style="margin-bottom: 0"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sold By: <user>User</user></p>
+                        <p class="product-rating"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Seller Rating: <rating>98%</rating></p>
+                      </div>
+                      <div class="col-xs-8 desc-container">
+                        Description:<p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim dapibus convallis. Sed dictum sem vitae augue feugiat sollicitudin. Duis ultricies dui est, non facilisis lectus rhoncus convallis. Vivamus maximus rutrum tempus. Suspendisse vitae quam porta, lacinia ligula viverra, rhoncus risus. Suspendisse commodo, risus ut condimentum semper, nisi elit consequat nibh, vel lacinia nulla ex ac nibh. Donec varius orci nisi. Vestibulum non velit nec leo bibendum facilisis quis vitae dolor. Vivamus ipsum elit, mattis dictum nisl id, malesuada porta elit. Nam quis vestibulum metus. Pellentesque at lorem mi. Praesent ac convallis nisi, at luctus ipsum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary pull-right">Buy Items</button>
           </div>
         </div>
       </div>

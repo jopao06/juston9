@@ -101,6 +101,39 @@ $(document).ready(function () {
       .text(thumbnail.find(".product-rating rating").text());
   });
 
+  $('#cart-modal').on('show.bs.modal', function (event) {
+    var modal = $(this);
+
+    modal.find('img').each(function(){
+      var img_width =  $(this).width(); 
+      var img_height = $(this).height();
+      // console.log(img_width+" "+img_height);
+      modal.find("img").removeClass("portrait").removeClass("landscape");
+      if(img_height > img_width){
+        $(this).addClass("portrait");
+      }
+      else{
+        $(this).addClass("landscape");
+      }
+
+      var desc = modal.find(".product-desc").text();
+      var maxLength = 100;
+      console.log(desc.length);
+      if (desc.length > maxLength) {
+          desc = desc.substr(0,maxLength-3) + "...";
+      }
+      modal.find(".product-desc").text(desc);
+    });
+
+
+  });
+
+  $('.cart-list.close').click(function(){
+    var target = $(this).attr("data-dismiss");
+
+    $(target).remove();
+  });
+
   var current_active = $('li.active');
   $('#log-in-modal').on('show.bs.modal', function (event) {
     current_active.removeClass("active");

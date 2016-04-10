@@ -61,3 +61,57 @@ div#main div.sidebar li.active.purple a{
 div#main div.sidebar li.active.green a{
   color: #bfee6e;
 }
+
+/**********************************************
+                  CART MODAL 
+***********************************************/
+div#cart-modal div.modal-content{
+  display: inline-flex;
+}
+
+div#cart-modal div.modal-body ul.list-group li.list-group-item{
+  /*height: 6.6em;*/
+  width: 100%;
+  display: inline-block;
+}
+div#cart-modal div.modal-body div.row{
+  width: 100%;
+  background-color: black;
+}
+
+div#cart-modal div.modal-body ul.list-group div.image-container{
+  width: 7em;
+  height: 7em;
+  overflow: hidden;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  padding-left: 0;
+  text-align:center;
+}
+
+div#cart-modal div.modal-body ul.list-group div.image-container img{
+  background-color: gray; 
+  max-height: 150px;
+  max-width: 150px;
+}
+
+div#cart-modal div.modal-body img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#cart-modal div.modal-body img.portrait{
+  width:100%;
+  height: auto;
+  display: block;
+}
+
+div#cart-modal div.modal-body img.landscape{
+  height:100%;
+  width: auto;
+  display: block;
+}
+
+div#cart-modal div.modal-body li.list-group-item div.desc-container{
+  height: 100%;
+}
